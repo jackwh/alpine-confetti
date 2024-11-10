@@ -4,8 +4,8 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
     eslint.configs.recommended,
-    ...tseslint.configs.recommendedTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
+    ...tseslint.configs.recommended,
+    ...tseslint.configs.stylistic,
     {
         languageOptions: {
             parserOptions: {
@@ -25,5 +25,9 @@ export default tseslint.config(
             "@typescript-eslint/no-unnecessary-boolean-literal-compare": "warn",
             "@typescript-eslint/no-unnecessary-type-parameters": "error",
         },
+        ignores: [
+            "tsup.config.ts",
+            "dist/*",
+        ],
     },
 );

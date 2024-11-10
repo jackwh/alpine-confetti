@@ -1,4 +1,4 @@
-import confetti, {Options} from "canvas-confetti";
+import confetti, {type Options} from "canvas-confetti";
 import type {Alpine} from "alpinejs";
 
 /** Get the midpoint x/y coordinates for an element onscreen */

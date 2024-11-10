@@ -2,33 +2,38 @@
   "name": "alpine-confetti",
   "version": "1.0.0",
   "description": "An Alpine.js plugin for canvas-confetti.",
-  "main": "src/index.js",
-  "module": "dist/module.esm.js",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jackwh/alpine-confetti"
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc && tsup",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
-  },
+  "author": "Jack Webb-Heller",
+  "license": "MIT",
   "keywords": [
     "alpinejs",
     "alpine",
     "confetti",
     "canvas-confetti"
   ],
-  "author": "Jack Webb-Heller",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackwh/alpine-confetti"
+  },
+
+  "main": "dist/index.js",
+  "module": "dist/plugin.mjs",
+  "types": "dist/plugin.d.ts",
+
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc && tsup",
+    "release": "npm run build && changeset publish",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
   "dependencies": {
     "canvas-confetti": "^1.9.3"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@types/alpinejs": "^3.13.10",
     "@types/canvas-confetti": "^1.6.4",
     "eslint": "^9.0",
