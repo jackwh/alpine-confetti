@@ -1,0 +1,135 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ArgumentEqualsDefaultValueInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="ClosureToArrowFunctionInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="CssMissingSemicolon" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="DivideByZeroJS" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="ForeachToCollectionInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="ForgottenDebugOutputInspection" enabled="true" level="ERROR" enabled_by_default="true">
+      <option name="configuration">
+        <list>
+          <option value="\Codeception\Util\Debug::debug" />
+          <option value="\Codeception\Util\Debug::pause" />
+          <option value="\Symfony\Component\Debug\Debug::enable" />
+          <option value="\Symfony\Component\Debug\DebugClassLoader::enable" />
+          <option value="\Symfony\Component\Debug\ErrorHandler::register" />
+          <option value="\Symfony\Component\Debug\ExceptionHandler::register" />
+          <option value="\Zend\Debug\Debug::dump" />
+          <option value="\Zend\Di\Display\Console::export" />
+          <option value="error_log" />
+          <option value="phpinfo" />
+        </list>
+      </option>
+      <option name="migratedIntoUserSpace" value="true" />
+    </inspection_tool>
+    <inspection_tool class="InconsistentLineSeparators" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="IsNullFunctionUsageInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="LongInheritanceChainInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="MapFlattenToFlatMapInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="MessDetectorValidationInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="CODESIZE" value="true" />
+      <option name="DESIGN" value="true" />
+      <option name="UNUSEDCODE" value="true" />
+      <option name="NAMING" value="true" />
+    </inspection_tool>
+    <inspection_tool class="MultipleReturnStatementsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="COMPLAIN_THRESHOLD" value="4" />
+    </inspection_tool>
+    <inspection_tool class="NullPointerExceptionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpCSValidationInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="WARNING_HIGHLIGHT_LEVEL_NAME" value="WEAK WARNING" />
+      <option name="EXTENSIONS" value="php" />
+    </inspection_tool>
+    <inspection_tool class="PhpClosureCanBeConvertedToShortArrowFunctionInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpDocMissingReturnTagInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="SKIP_ON_EMPTY_PHPDOC" value="false" />
+      <option name="SKIP_ON_PRESENT_TYPE_HINT" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PhpFullyQualifiedNameUsageInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpMethodOrClassCallIsNotCaseSensitiveInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpMissingDocCommentInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="CHECK_CLASS" value="false" />
+    </inspection_tool>
+    <inspection_tool class="PhpNonCanonicalElementsOrderInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpOverridingMethodVisibilityInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpRedundantDocCommentInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpTooManyParametersInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpTraditionalSyntaxArrayLiteralInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpUndefinedCallbackInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpUnitDeprecationsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="PHP_UNIT_VERSION" value="9.1" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnitTestsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="PHP_UNIT_VERSION" value="9.1" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnnecessaryFullyQualifiedNameInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpUsageOfSilenceOperatorInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="ProblematicWhitespace" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PropertyCanBeStaticInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="ReplaceAssignmentWithOperatorAssignmentJS" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="SecurityAdvisoriesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="optionConfiguration">
+        <list>
+          <option value="barryvdh/laravel-debugbar" />
+          <option value="behat/behat" />
+          <option value="brianium/paratest" />
+          <option value="codeception/codeception" />
+          <option value="codedungeon/phpunit-result-printer" />
+          <option value="composer/composer" />
+          <option value="doctrine/coding-standard" />
+          <option value="filp/whoops" />
+          <option value="friendsofphp/php-cs-fixer" />
+          <option value="humbug/humbug" />
+          <option value="infection/infection" />
+          <option value="jakub-onderka/php-parallel-lint" />
+          <option value="johnkary/phpunit-speedtrap" />
+          <option value="kalessil/production-dependencies-guard" />
+          <option value="mikey179/vfsStream" />
+          <option value="mockery/mockery" />
+          <option value="mybuilder/phpunit-accelerator" />
+          <option value="orchestra/testbench" />
+          <option value="pdepend/pdepend" />
+          <option value="phan/phan" />
+          <option value="phing/phing" />
+          <option value="phpcompatibility/php-compatibility" />
+          <option value="phpmd/phpmd" />
+          <option value="phpro/grumphp" />
+          <option value="phpspec/phpspec" />
+          <option value="phpspec/prophecy" />
+          <option value="phpstan/phpstan" />
+          <option value="phpunit/phpunit" />
+          <option value="povils/phpmnd" />
+          <option value="roave/security-advisories" />
+          <option value="satooshi/php-coveralls" />
+          <option value="sebastian/phpcpd" />
+          <option value="slevomat/coding-standard" />
+          <option value="spatie/phpunit-watcher" />
+          <option value="squizlabs/php_codesniffer" />
+          <option value="sstalle/php7cc" />
+          <option value="symfony/debug" />
+          <option value="symfony/maker-bundle" />
+          <option value="symfony/phpunit-bridge" />
+          <option value="symfony/var-dumper" />
+          <option value="vimeo/psalm" />
+          <option value="wimg/php-compatibility" />
+          <option value="wp-coding-standards/wpcs" />
+          <option value="yiisoft/yii2-coding-standards" />
+          <option value="yiisoft/yii2-debug" />
+          <option value="yiisoft/yii2-gii" />
+          <option value="zendframework/zend-coding-standard" />
+          <option value="zendframework/zend-debug" />
+          <option value="zendframework/zend-test" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SelfClassReferencingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="PREFER_CLASS_NAMES" value="true" />
+    </inspection_tool>
+    <inspection_tool class="StaticClosureCanBeUsedInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="UntrustedInclusionInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="WhereFirstInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="WhereIsNotEmptyInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+  </profile>
+</component>

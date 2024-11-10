@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "allowUmdGlobalAccess": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "isolatedModules": true,
+    "target": "ES6",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+}
