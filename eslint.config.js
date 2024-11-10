@@ -27,7 +27,9 @@ export default tseslint.config(
         },
         ignores: [
             "tsup.config.ts",
-            "dist/*",
+            "dist/browser.js",
+            "dist/module.js",
+            "dist/module.mjs",
         ],
     },
 );

@@ -14,11 +14,10 @@
     "type": "git",
     "url": "https://github.com/jackwh/alpine-confetti"
   },
-
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/plugin.mjs",
   "types": "dist/plugin.d.ts",
-
   "files": [
     "dist",
     "src"
@@ -26,13 +25,13 @@
   "scripts": {
     "build": "tsc && tsup",
     "release": "npm run build && changeset publish",
-    "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint": "tsc"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
     "@changesets/cli": "^2.26.0",
     "@types/alpinejs": "^3.13.10",
     "@types/canvas-confetti": "^1.6.4",
