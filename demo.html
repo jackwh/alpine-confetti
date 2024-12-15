@@ -10,65 +10,174 @@
   <script defer src="dist/browser.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body x-init="{}" class="h-screen flex flex-col justify-center">
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<body x-init="{}" class="h-screen flex flex-col justify-center bg-gradient-to-t from-slate-900 to-blue-200">
+<div class="bg-cover mix-blend-multiply bg-no-repeat bg-center h-full w-full absolute z-0 select-none pointer-events-none z-0"
+     style="background-image: url('assets/bg1.png');">
+</div>
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
   <div class="mx-auto max-w-3xl space-y-5">
 
-    <div class="bg-gray-50 sm:rounded-lg">
+    <div class="sm:rounded-lg bg-amber-50/70 backdrop-blur-md shadow-lg">
       <div class="px-4 py-5 sm:p-6">
         <h3 class="text-lg font-semibold leading-6 text-gray-900">
           Confetti
         </h3>
-        <div class="mt-2 max-w-xl text-base text-gray-500">
-          <p>Use <span class="font-mono">$confetti</span> to celebrate an interaction with your Alpine component.</p>
+        <div class="mt-2 max-w-xl text-base text-slate-600">
+          <p>
+            Use <span class="font-mono">$confetti</span> to celebrate an interaction with your Alpine component.
+            By default it creates a burst of confetti originating from the target element, but you can create
+            custom effects by passing an object with options.
+          </p>
         </div>
-        <div class="mt-5">
+        <div class="mt-5 flex justify-evenly items-center">
           <button type="button"
                   x-on:click="$confetti()"
-                  class="inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-            🎉 Click Me!
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-blue-50 active:bg-blue-100">
+            <span class="mr-2">🎉</span> Click Me!
           </button>
+
+          <button type="button"
+                  x-data="{
+                    isHovering: false,
+                    volcano() {
+                      if (this.isHovering) {
+                        $confetti({
+                          particleCount: Math.floor(Math.random() * 10),
+                          colors: ['#1c1917', '#262626', '#09090b', '#57534e'],
+                          angle: 75 + (Math.random() * 30),
+                          gravity: 0.1 + (Math.random() * 0.2),
+                          drift: Math.random() * (Math.random() > 0.5 ? 1 : -1),
+                          ticks: 10 + (Math.random() * 200),
+                          spread: (Math.random() * 50),
+                          startVelocity: 10 + (Math.random() * 10)
+                        });
+                      }
+                      this.schedule();
+                    },
+                    schedule () {
+                      setTimeout(() => this.volcano(), 250 * (Math.random() * 3));
+                    }
+                  }"
+                  x-init="schedule"
+                  x-on:mouseenter="isHovering = true"
+                  x-on:mouseleave="isHovering = false"
+                  x-on:click="$confetti({
+                      particleCount: 100 + Math.floor(Math.random() * 200),
+                      scalar: 1.5,
+                      angle: 75 + (Math.random() * 30),
+                      gravity: 0.2 + (Math.random() * 0.3),
+                      drift: Math.random() * (Math.random() > 0.5 ? 1 : -1),
+                      ticks: 50 + (Math.random() * 250),
+                      spread: 10 + (Math.random() * 50),
+                      colors: ['#b91c1c', '#9a3412', '#f59e0b', '#fcd34d', '#292524', '#450a0a'],
+                      startVelocity: 20 + (Math.random() * 10)
+                  })"
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-50 active:bg-red-100">
+            <span class="mr-2">🌋</span> Click Me...
+          </button>
+
+          <button type="button"
+                  x-data="{ clicked: false, sneezed: false }"
+                  x-on:click="clicked = true;"
+                  x-on:click.debounce.750ms="
+                    $confetti({
+                      particleCount: Math.floor(Math.random() * 50) + 10,
+                      angle: 270 + ((Math.random() * 30)* (Math.random() > 0.5 ? 1 : -1)),
+                      spread: 55,
+                      scalar: 0.75,
+                      colors: ['#3f6212', '#16a34a', '#84cc16', '#1a2e05']
+                    });
+                    sneezed = true;
+                    setTimeout(() => { sneezed = false; clicked = false; }, 1000);"
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-50 active:bg-green-100">
+            <span x-text="sneezed ? '🤧 Ahhchooo!' : clicked ? '😫 Ahh...' : '👃 Click Me?'">👃 Click Me?</span>
+          </button>
+        </div>
+        <div class="mt-5 flex justify-evenly items-center">
+          <code class="text-sm text-gray-500">
+              &lt;button x-on:click=&quot;$confetti()&quot;&gt; ... &lt;/button&gt;
+          </code>
         </div>
       </div>
     </div>
 
-    <div class="bg-gray-50 sm:rounded-lg">
+    <div class="sm:rounded-lg bg-amber-50/70 backdrop-blur-md">
       <div class="px-4 py-5 sm:p-6">
         <h3 class="text-lg font-semibold leading-6 text-gray-900">
           Starbust
         </h3>
         <div class="mt-2 max-w-xl text-base text-gray-500">
-          <p>Use <span class="font-mono">$starburst</span> to add a little magic to your UI.</p>
+          <p>
+            Use the <span class="font-mono">$starburst</span> preset to add a little magic to your UI.
+            Specify the number of stars, or pass an object for more control and customization.
+          </p>
         </div>
-        <div class="mt-5">
+        <div class="mt-5 flex justify-evenly items-center">
           <button type="button"
-                  x-on:mousemove.throttle="$starburst()"
-                  class="inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-            ✨ Hover Me...
+                  x-on:click="$starburst()"
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-yellow-50 active:bg-yellow-100">
+            ✨ Click Me...
           </button>
+
+          <button type="button"
+                  x-on:mousemove.throttle="$starburst({
+                      particleCount: 5,
+                      gravity: -1,
+                      ticks: 250,
+                      spread: 45,
+                      startVelocity: 10,
+                      scalar: 1 + (Math.random() * 2.5),
+                      drift: 0
+                  })"
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-yellow-50 active:bg-yellow-100">
+            💫 Hover Me...
+          </button>
+        </div>
+        <div class="mt-5 flex justify-evenly items-center">
+          <code class="text-sm text-gray-500">
+            &lt;button x-on:click=&quot;$starburst(10)&quot;&gt; ... &lt;/button&gt;
+          </code>
         </div>
       </div>
     </div>
 
-    <div class="bg-gray-50 sm:rounded-lg">
+    <div class="sm:rounded-lg bg-amber-50/70 backdrop-blur-md">
       <div class="px-4 py-5 sm:p-6">
         <h3 class="text-lg font-semibold leading-6 text-gray-900">
           Emojify
         </h3>
         <div class="mt-2 max-w-xl text-base text-gray-500">
-          <p>Use <span class="font-mono">$emojify</span> to surprise and/or annoy your users.</p>
+          <p>
+            Use <span class="font-mono">$emojify</span> to surprise and/or annoy your users. Pass an array of emojis
+            or an object to customize further. Use responsibly! (Or not... 🤪)
+          </p>
         </div>
-        <div class="mt-5">
+        <div class="mt-5 flex justify-evenly items-center">
           <button type="button"
-                  x-on:click="$emojify()"
-                  class="inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-            🤨 Really?
+                  x-on:click="$emojify(['💩', '😂'], {particleCount: 50, ticks: 250, 'gravity': 1, angle: 90, decay: 0.95, startVelocity: 30, origin: {x:0.5,y:0}})"
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-50 active:bg-red-100">
+            🚫 Don't Click Me
           </button>
+          <button type="button"
+                  x-data="{wasKissed: false}"
+                  x-on:click="
+                    $emojify(['💘', '😍', '🍆', '❤️'], {'gravity': 0, angle: 180, flat: true});
+                    wasKissed = true;
+                    setTimeout(() => { wasKissed = false; }, 1000);
+                  "
+                  class="transition-all inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-red-50 active:bg-red-100">
+            <span x-text="wasKissed ? '😘 Mwah!' : '💋 Kiss Me'">💋 Kiss Me</span>
+          </button>
+        </div>
+        <div class="mt-5 flex justify-evenly items-center">
+          <code class="text-sm text-gray-500">
+            &lt;button x-on:click=&quot;$emojify(['😎', '🚀'])&quot;&gt; ... &lt;/button&gt;
+          </code>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 </body>
 </html>
