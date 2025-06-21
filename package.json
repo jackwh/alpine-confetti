@@ -15,9 +15,9 @@
     "url": "https://github.com/jackwh/alpine-confetti"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/plugin.mjs",
-  "types": "dist/plugin.d.ts",
+  "main": "dist/browser.js",
+  "module": "dist/module.js",
+  "types": "dist/module.d.ts",
   "files": [
     "dist",
     "src"
