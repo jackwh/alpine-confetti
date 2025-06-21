@@ -80,7 +80,7 @@
           <button type="button"
                   x-data="{ clicked: false, sneezed: false }"
                   x-on:click="clicked = true;"
-                  x-on:click.debounce.750ms="
+                  x-on:click.debounce.500ms="
                     $confetti({
                       particleCount: Math.floor(Math.random() * 50) + 10,
                       angle: 270 + ((Math.random() * 30)* (Math.random() > 0.5 ? 1 : -1)),

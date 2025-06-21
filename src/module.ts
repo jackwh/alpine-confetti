@@ -21,7 +21,7 @@ export const defaultConfettiOptions: Partial<Options> = {
 
 /** Default starburst options */
 export const defaultStarburstOptions: Partial<Options> = {
-    particleCount: 25,
+    particleCount: 10,
     shapes: ['star'],
     colors: ['#fefce8', '#fef9c3', '#fef08a', '#fde047', '#facc15'],
     ticks: 50,
