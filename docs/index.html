@@ -7,16 +7,34 @@
   <title>Alpine Confetti Demo</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="../dist/browser.global.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpine-confetti@latest/dist/browser.global.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body x-init="{}" class="h-screen flex flex-col justify-center bg-gradient-to-t from-slate-900 to-blue-200">
 <div class="bg-cover mix-blend-multiply bg-no-repeat bg-center h-full w-full absolute z-0 select-none pointer-events-none z-0"
-     style="background-image: url('../assets/bg1.png');">
+     style="background-image: url('assets/bg1.png');">
 </div>
 
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
   <div class="mx-auto max-w-3xl space-y-5">
+
+    <div class="sm:rounded-lg bg-amber-50/70 backdrop-blur-md shadow-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <h3 class="text-2xl font-semibold leading-6 text-gray-900">
+          Alpine Confetti Demo
+        </h3>
+        <div class="mt-2 max-w-xl text-base text-slate-600">
+          <p class="mb-5">
+            This plugin adds zero-config celebration effects to your web app using
+            <a href="https://www.npmjs.com/package/canvas-confetti" target="_blank" class="text-blue-700 font-mono">canvas-confetti</a>
+            and <a href="https://alpinejs.dev" target="_blank" class="text-blue-700">Alpine.js</a>.
+          </p>
+          <p class="">
+            Check out the <a href="https://github.com/jackwh/alpine-confetti" target="_blank" class="font-bold text-blue-500 underline">README on GitHub &rarr;</a> for more information.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div class="sm:rounded-lg bg-amber-50/70 backdrop-blur-md shadow-lg">
       <div class="px-4 py-5 sm:p-6">

@@ -16,7 +16,7 @@ Turn any interaction into a moment of joy\* with just a simple [Alpine.js](https
 
 ## 👀 Interactive Demo
 
-> See interactive examples [on the Demo page](docs/index.html) ➡️
+> See interactive examples [on the Demo page](https://jackwh.github.io/alpine-confetti/) ➡️
 
 ## 🚀 Quick Start
 
@@ -109,7 +109,7 @@ Because sometimes regular particles just won't do...
 
 There are lots of ways to use confetti effects interactively.
  
-Here's just one example, check out the rest on the [Demo page](docs/index.html) for more ➡️
+Here's just one example, check out the rest on the [Demo page](https://jackwh.github.io/alpine-confetti/) for more ➡️
 
 ```html
 <button
@@ -152,7 +152,7 @@ Here's just one example, check out the rest on the [Demo page](docs/index.html) 
 </button>
 ```
 
-See the [Demo page](docs/index.html) to try this out.
+See the [Demo page](https://jackwh.github.io/alpine-confetti/) to try this out.
 
 ## 🎛️ API Reference
 
