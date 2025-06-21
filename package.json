@@ -1,6 +1,6 @@
 {
   "name": "alpine-confetti",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "description": "An Alpine.js plugin for canvas-confetti.",
   "author": "Jack Webb-Heller",
   "license": "MIT",
