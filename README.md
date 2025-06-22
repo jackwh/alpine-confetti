@@ -70,13 +70,11 @@ npm install alpine-confetti
 Then register the plugin:
 
 ```javascript
-import Alpine from 'alpinejs';
 import AlpineConfetti from 'alpine-confetti';
 
-Alpine.plugin(AlpineConfetti);
-
-window.Alpine = Alpine;
-window.Alpine.start();
+document.addEventListener('alpine:init', () => {
+  AlpineConfetti(window.Alpine);
+});
 ```
 
 ## 🔧 Usage
