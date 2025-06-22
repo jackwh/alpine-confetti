@@ -1,5 +1,11 @@
 # alpine-confetti
 
+## 1.0.2
+
+### Patch Changes
+
+- beea799: Updated README
+
 ## 1.0.1
 
 ### Major Changes
