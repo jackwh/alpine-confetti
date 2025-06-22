@@ -1,8 +1,29 @@
-# 🎉 Alpine Confetti
+<h1 align="center">🎉 Alpine Confetti</h1>
 
-Turn any interaction into a moment of joy\* with just a simple [Alpine.js](https://alpinejs.dev) directive! This plugin adds zero-config celebration effects to your web app using [`canvas-confetti`](https://www.npmjs.com/package/canvas-confetti).
+<p align="center" style="text-wrap: balance;">
+  Turn any interaction into a moment of joy* with zero-config <a href="https://alpinejs.dev" target="_blank">Alpine.js</a> directives for <a href="https://www.npmjs.com/package/canvas-confetti" target="_blank">canvas-confetti</a>.
+</p>
 
-<small>\* Disclaimer: actual joy may vary.</small>
+<p align="center">
+  <a href="https://www.npmjs.com/package/alpine-confetti">
+    <img src="https://img.shields.io/github/v/tag/jackwh/alpine-confetti?label=version" alt="version">
+  </a>
+  <a href="https://www.npmjs.com/package/alpine-confetti">
+    <img src="https://img.shields.io/npm/dt/alpine-confetti" alt="downloads">
+  </a>
+  <a href="https://www.jsdelivr.com/package/npm/alpine-confetti">
+    <img src="https://data.jsdelivr.com/v1/package/npm/alpine-confetti/badge?style=rounded" alt="JSDelivr">
+  </a>
+  <a href="https://www.npmjs.com/package/alpine-confetti">
+    <img alt="GitHub" src="https://img.shields.io/github/license/jackwh/alpine-confetti">
+  </a>
+</p>
+
+<p align="center">
+  <small>* Disclaimer: actual joy may vary.</small>
+</p>
+
+![Alpine Confetti banner](docs/assets/art.jpg)
 
 ## ✨ Features
 
