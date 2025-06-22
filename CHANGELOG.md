@@ -1,5 +1,11 @@
 # alpine-confetti
 
+## 1.0.3
+
+### Patch Changes
+
+- 3f62150: Update README for npm usage
+
 ## 1.0.2
 
 ### Patch Changes
