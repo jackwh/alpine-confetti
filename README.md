@@ -226,5 +226,5 @@ The plugin respects the `prefers-reduced-motion` media query by default. Users w
 - 🎊 [canvas-confetti](https://github.com/catdad/canvas-confetti)
 - ⛰️ [Alpine.js](https://alpinejs.dev)
 - 🎨 [Tailwind CSS](http://tailwindcss.com) (for demo styles)
-- 🍳 [Jack W-H](https://github.com/jackwh)
+- 😎 [Jack Webb-Heller](https://github.com/jackwh)
 - 🫵 You? Contributions are welcome!
