@@ -1,5 +1,5 @@
 {
-  "name": "alpine-confetti",
+  "name": "@jackwh/alpine-confetti",
   "version": "1.0.3",
   "description": "An Alpine.js plugin for canvas-confetti.",
   "author": "Jack Webb-Heller",
@@ -24,6 +24,7 @@
   ],
   "scripts": {
     "build": "tsc && tsup",
+    "change": "npx @changesets/cli",
     "release": "npm run build && changeset publish",
     "lint": "tsc"
   },

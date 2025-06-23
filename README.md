@@ -5,16 +5,16 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/alpine-confetti">
+  <a href="https://www.npmjs.com/package/@jackwh/alpine-confetti">
     <img src="https://img.shields.io/github/v/tag/jackwh/alpine-confetti?label=version" alt="version">
   </a>
-  <a href="https://www.npmjs.com/package/alpine-confetti">
-    <img src="https://img.shields.io/npm/dt/alpine-confetti" alt="downloads">
+  <a href="https://www.npmjs.com/package/@jackwh/alpine-confetti">
+    <img src="https://img.shields.io/npm/dt/@jackwh/alpine-confetti" alt="downloads">
   </a>
-  <a href="https://www.jsdelivr.com/package/npm/alpine-confetti">
-    <img src="https://data.jsdelivr.com/v1/package/npm/alpine-confetti/badge?style=rounded" alt="JSDelivr">
+  <a href="https://www.jsdelivr.com/package/npm/@jackwh/alpine-confetti">
+    <img src="https://data.jsdelivr.com/v1/package/npm/@jackwh/alpine-confetti/badge?style=rounded" alt="JSDelivr">
   </a>
-  <a href="https://www.npmjs.com/package/alpine-confetti">
+  <a href="https://www.npmjs.com/package/@jackwh/alpine-confetti">
     <img alt="GitHub" src="https://img.shields.io/github/license/jackwh/alpine-confetti">
   </a>
 </p>
@@ -50,7 +50,7 @@ Add Alpine Confetti to your page via CDN:
 <html>
 <head>
     <!-- Make sure the plugin is loaded before Alpine.js: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpine-confetti@latest/dist/browser.global.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@jackwh/alpine-confetti@latest/dist/browser.global.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
@@ -64,13 +64,13 @@ Add Alpine Confetti to your page via CDN:
 ### NPM Installation
 
 ```bash
-npm install alpine-confetti
+npm install @jackwh/alpine-confetti
 ```
 
 Then register the plugin:
 
 ```javascript
-import AlpineConfetti from 'alpine-confetti';
+import AlpineConfetti from '@jackwh/alpine-confetti';
 
 document.addEventListener('alpine:init', () => {
   AlpineConfetti(window.Alpine);
