@@ -1,5 +1,15 @@
 # alpine-confetti
 
+## 1.1.0
+
+### Minor Changes
+
+- 15218fb: Republished as a user-scoped package on npm
+
+### Patch Changes
+
+- 259447b: Fix package-lock.json
+
 ## 1.0.3
 
 ### Patch Changes
